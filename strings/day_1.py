@@ -1,8 +1,5 @@
 def string_reverse( a: str) -> str:
-    reverse = ''
-    for i in range(0, len(a)):
-        reverse = a[i] + reverse
-    print(reverse)
+    print(a[::-1])
 
 string_reverse('cat')
 string_reverse('The Daily Byte')
