@@ -17,7 +17,7 @@ def intersection_of(a: list, b:list):
         long = b
         short = a
         
-    short = list(set(short))
+    short = set(short)
     
     for i in short:
         if i in long:
