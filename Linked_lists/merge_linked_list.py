@@ -6,7 +6,7 @@
 # list1 = 1->3->5, list2 = 2->4->6->null, return 1->2->3->4->5->6->null
 # list1 = 4->4->7, list2 = 1->5->6->null, return 1->4->4->5->6->7->null
 
-from Linked_List import LinkedList, create_linked_list, Node
+from Linked_List import print_node_chain, create_linked_list, Node
 def merge(l1, l2):
     answer = Node(4)
     ans_pointer = answer
@@ -32,20 +32,9 @@ def merge(l1, l2):
         
         ans_pointer = ans_pointer.next
     
-    def print_values(headNode):
-        lst = []
-        cur = headNode
-        while cur:
-            lst.append(str(cur.val))
-            cur = cur.next
-        
-        if len(lst) == 0:
-            print('null')
-            return
-        
-        print(' -> '.join(lst) + ' -> null')
     
-    print_values(answer.next)
+    
+    print_node_chain(answer.next)
     return
 
 

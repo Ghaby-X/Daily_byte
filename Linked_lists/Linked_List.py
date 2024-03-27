@@ -45,3 +45,16 @@ def create_linked_list(val: list):
         created_list.addNode(i)
         
     return created_list
+
+def print_node_chain(headNode):
+        lst = []
+        cur = headNode
+        while cur:
+            lst.append(str(cur.val))
+            cur = cur.next
+        
+        if len(lst) == 0:
+            print('null')
+            return
+        
+        print(' -> '.join(lst) + ' -> null')
