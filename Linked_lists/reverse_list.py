@@ -14,7 +14,6 @@ def reverse(lst):
         print_node_chain(lst.head)
         return
     
-    reverse = Node(-1)
     p_reverse = None
     current = lst.head
     
