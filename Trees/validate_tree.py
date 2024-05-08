@@ -20,25 +20,6 @@ class TreeNode:
         self.left = None
         self.right = None
         
-def validate_tree(root: TreeNode):
-    if root == None:
-        return True
-    
-    if root.left == None and root.right == None:
-        return True
-    
-    
-    # if root.left & root.right == None:
-    #     return root.value >= root.left.value
-    
-    # if root.right & root.left == None:
-    #     return root.value <= root.right.value
-    
-    # if root.left != None and root.right != None:
-    #     return root.value >= root.left.value & root.value <= root.right.value
-    
-    # left = validate_tree(root.left)
-    # right = validate_tree(root.right)
     
 def bfs_validate(root: TreeNode):
     if root == None: return True
