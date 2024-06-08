@@ -30,4 +30,4 @@ def generate_parentheses(N: int):
     populate()
     print(answer)
 
-generate_parentheses(13)
+generate_parentheses(3)
