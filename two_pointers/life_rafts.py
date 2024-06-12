@@ -14,12 +14,7 @@ def max_raft(weights, limit):
     sort_weights = sorted(weights)
     min_number = 0
     
-    while(l <= r):        
-        # if (sort_weights[r] == limit) or (sort_weights[r] + sort_weights[l] > limit):
-        #     min_number += 1
-        #     r = r-1
-        #     continue
-        
+    while(l <= r):             
         if (sort_weights[r] + sort_weights[l]) <= limit:
             l += 1
         
