@@ -108,6 +108,15 @@ class maxHeap(Heap):
 
 # implementation of min heap
 class minHeap(Heap):
+    def heapify(self, array: list):
+        last_idx = len(array) - 1
+        self.queue = array
+        
+        for i in range(last_idx, -1, -1):
+            self._downheap(i)
+            pass
+        pass
+    
     def _downheap(self, idx=0):
         length = len(self.queue)
         left = self._Heap__left(idx)
@@ -120,7 +129,7 @@ class minHeap(Heap):
             if left > length - 1:
                 break
             
-            if self.queue[right] > self.queue[left] and right < length:
+            if right < length and self.queue[right] > self.queue[left]:
                 min_index = left
             else:
                 min_index = right
@@ -138,14 +147,19 @@ class minHeap(Heap):
             self._Heap__swap(idx, parent_idx)
             idx = parent_idx
 
-heap = minHeap()
-heap.insert(3)
-heap.insert(10)
-heap.insert(8)
-heap.insert(14)
-heap.insert(5)
-heap.insert(25)
-heap.remove()
-heap.insert(0)
-heap.peek() # removes max which is 25
+# heap = minHeap()
+# heap.insert(3)
+# heap.insert(10)
+# heap.insert(8)
+# heap.insert(14)
+# heap.insert(5)
+# heap.insert(25)
+# heap.remove()
+# heap.insert(0)
+# heap.peek() # removes max which is 25
+# heap.to_list()
+
+heap =minHeap()
+
+heap.heapify([1,2,3,4,5,6])
 heap.to_list()
