@@ -19,9 +19,6 @@
 # collect $20 from the fifth customer and give back $10 change ($10 bill and $5 bill).
 
 
-
-# I will check whether I have change <- bill - price
-
 def can_serve(bills):
     five = ten = 0
     for i in bills:
